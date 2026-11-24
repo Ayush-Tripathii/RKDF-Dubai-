@@ -5,6 +5,7 @@ import path from 'node:path';
 import { pathToFileURL } from 'node:url';
 
 const root = path.resolve('dist/client');
+const base = process.env.VITE_BASE || '/RKDF-Dubai-/';
 // Keep the pristine Vite template so the prerenderer can safely be re-run.
 const built = await fs.readFile(path.join(root, 'index.html'), 'utf8');
 if (built.includes('<!--app-->')) await fs.writeFile('dist/template.html', built);
@@ -21,7 +22,7 @@ for (const url of urls) {
     .replace('<!--lang-->', lang).replace('<!--dir-->', dir)
     .replace('<!--head-->', head)
     .replace('<!--preload-->', lang === 'ar'
-      ? '<link rel="preload" href="/fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin />\n    <link rel="preload" href="/fonts/noto-kufi-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin />'
+      ? `<link rel="preload" href="${base}fonts/ibm-plex-sans-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin />\n    <link rel="preload" href="${base}fonts/noto-kufi-arabic-arabic-400-normal.woff2" as="font" type="font/woff2" crossorigin />`
       : '')
     .replace('<!--app-->', html);
   const file = url === '/' ? 'index.html' : url === '/404' ? '404.html' : path.join(url.slice(1), 'index.html');

@@ -15,7 +15,9 @@ interface PictureProps {
   ratio?: string; // e.g. '3 / 2' — crops with object-fit
 }
 
-const srcset = (name: string, ext: string) => imageWidths.map((w) => `/images/${name}-${w}.${ext} ${w}w`).join(', ');
+const base = import.meta.env.BASE_URL || '/';
+const cleanBase = base.endsWith('/') ? base : `${base}/`;
+const srcset = (name: string, ext: string) => imageWidths.map((w) => `${cleanBase}images/${name}-${w}.${ext} ${w}w`).join(', ');
 
 export function Picture({ name, sizes = '100vw', alt, priority = false, className = '', imgClassName = '', ratio }: PictureProps) {
   const d = mediaDims[name] ?? { width: 2000, height: 1333 };
@@ -24,7 +26,7 @@ export function Picture({ name, sizes = '100vw', alt, priority = false, classNam
       <source type="image/avif" srcSet={srcset(name, 'avif')} sizes={sizes} />
       <source type="image/webp" srcSet={srcset(name, 'webp')} sizes={sizes} />
       <img
-        src={`/images/${name}-1280.webp`}
+        src={`${cleanBase}images/${name}-1280.webp`}
         alt={alt ?? media[name]}
         width={d.width}
         height={d.height}
@@ -57,8 +59,8 @@ export function Portrait({ portrait, initials, size = 96, alt }: { portrait?: Po
   if (portrait) {
     return (
       <picture className="block shrink-0 overflow-hidden rounded-full border border-rule bg-stone" style={{ width: size, height: size }}>
-        <source type="image/avif" srcSet={`/images/portrait-${portrait}.avif`} />
-        <img src={`/images/portrait-${portrait}.webp`} alt={alt ?? portraits[portrait]} width={size} height={size} loading="lazy" className="h-full w-full rounded-full object-cover" />
+        <source type="image/avif" srcSet={`${cleanBase}images/portrait-${portrait}.avif`} />
+        <img src={`${cleanBase}images/portrait-${portrait}.webp`} alt={alt ?? portraits[portrait]} width={size} height={size} loading="lazy" className="h-full w-full rounded-full object-cover" />
       </picture>
     );
   }

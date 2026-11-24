@@ -72,6 +72,8 @@ export function Contact() {
 export function Downloads() {
   const p = useT().pages.downloads;
   const groups = Array.from(new Set(downloads.map((d) => d.group)));
+  const base = import.meta.env.BASE_URL || '/';
+  const cleanBase = base.endsWith('/') ? base : `${base}/`;
   return (
     <PageShell title={p.title} standfirst={p.standfirst} image="writing" crumbs={[{ label: p.title }]}
       seo={{ description: 'Download the RKDF University Dubai prospectus, fee schedule, admissions forms and university policies.' }}>
@@ -82,7 +84,7 @@ export function Downloads() {
             <ul className="border-t border-rule">
               {downloads.filter((d) => d.group === g).map((d) => (
                 <li key={d.file} className="border-b border-rule">
-                  <a href={d.file} download className="flex items-center justify-between gap-6 py-5 transition-colors duration-150 hover:text-accent-deep">
+                  <a href={`${cleanBase}${d.file.replace(/^\//, '')}`} download className="flex items-center justify-between gap-6 py-5 transition-colors duration-150 hover:text-accent-deep">
                     <span className="font-serif text-[1.25rem] text-primary">{d.title}</span>
                     <span className="flex shrink-0 items-center gap-2 text-[13px] text-ink-55">{d.size}<Icon name="download" size={18} /></span>
                   </a>

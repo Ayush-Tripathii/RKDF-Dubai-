@@ -50,7 +50,8 @@ function LangSwitch({ className = '' }: { className?: string }) {
   const locale = useLocale();
   const { pathname, hash } = useLocation();
   const other = locale === 'en' ? 'ar' : 'en';
-  const href = localizePath(basePath(pathname), other) + hash;
+  const base = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
+  const href = `${base}${localizePath(basePath(pathname), other) + hash}`;
   return (
     <span className={`inline-flex items-center gap-2 ${className}`}>
       <span aria-current="true" className="font-semibold text-primary">{t.current}</span>

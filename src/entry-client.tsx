@@ -5,9 +5,10 @@ import App from './App';
 import './styles/global.css';
 
 const root = document.getElementById('root')!;
+const basename = (import.meta.env.BASE_URL || '/').replace(/\/$/, '');
 const app = (
   <StrictMode>
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <App />
     </BrowserRouter>
   </StrictMode>
