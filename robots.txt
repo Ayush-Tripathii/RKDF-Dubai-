@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+Disallow: /styleguide
+Disallow: /ar/styleguide
+
+Sitemap: https://www.rkdfdubai.ac.ae/sitemap.xml
