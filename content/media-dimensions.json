@@ -1,0 +1,142 @@
+{
+  "hero": {
+    "width": 2000,
+    "height": 1552
+  },
+  "campusLawn": {
+    "width": 2000,
+    "height": 1501
+  },
+  "campusWalk": {
+    "width": 2000,
+    "height": 1335
+  },
+  "campusBrick": {
+    "width": 2000,
+    "height": 1310
+  },
+  "campusQuad": {
+    "width": 2000,
+    "height": 1500
+  },
+  "libraryGlass": {
+    "width": 2000,
+    "height": 1500
+  },
+  "libraryStacks": {
+    "width": 2000,
+    "height": 1849
+  },
+  "libraryShelves": {
+    "width": 2000,
+    "height": 1173
+  },
+  "libraryCurved": {
+    "width": 2000,
+    "height": 1335
+  },
+  "libraryAisle": {
+    "width": 2000,
+    "height": 1333
+  },
+  "libraryStudent": {
+    "width": 2000,
+    "height": 1334
+  },
+  "lectureTheatre": {
+    "width": 2000,
+    "height": 1500
+  },
+  "labGlass": {
+    "width": 2000,
+    "height": 1333
+  },
+  "labEngineer": {
+    "width": 2000,
+    "height": 1334
+  },
+  "labCells": {
+    "width": 2000,
+    "height": 2000
+  },
+  "dubaiSkyline": {
+    "width": 2000,
+    "height": 1333
+  },
+  "dubaiTower": {
+    "width": 2000,
+    "height": 2667
+  },
+  "dubaiMarina": {
+    "width": 2000,
+    "height": 3000
+  },
+  "glassFacade": {
+    "width": 2000,
+    "height": 3000
+  },
+  "whiteFacade": {
+    "width": 2000,
+    "height": 2831
+  },
+  "greenFacade": {
+    "width": 2000,
+    "height": 1333
+  },
+  "studentsLaptops": {
+    "width": 2000,
+    "height": 1333
+  },
+  "studentsLibrary": {
+    "width": 2000,
+    "height": 1333
+  },
+  "studentsSeminar": {
+    "width": 2000,
+    "height": 1333
+  },
+  "studentsCode": {
+    "width": 2000,
+    "height": 1333
+  },
+  "studentsNotes": {
+    "width": 2000,
+    "height": 1333
+  },
+  "classLaptops": {
+    "width": 2000,
+    "height": 1333
+  },
+  "sharedDesk": {
+    "width": 2000,
+    "height": 1333
+  },
+  "construction": {
+    "width": 2000,
+    "height": 1325
+  },
+  "siteSurvey": {
+    "width": 2000,
+    "height": 1333
+  },
+  "solar": {
+    "width": 2000,
+    "height": 1331
+  },
+  "dataLaptop": {
+    "width": 2000,
+    "height": 1425
+  },
+  "lawLibrary": {
+    "width": 2000,
+    "height": 1333
+  },
+  "drafting": {
+    "width": 2000,
+    "height": 1125
+  },
+  "writing": {
+    "width": 2000,
+    "height": 1333
+  }
+}
